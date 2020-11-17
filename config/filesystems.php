@@ -51,6 +51,10 @@ return [
             'driver' => 'local',
             'root' => public_path('uploads/course'),
         ],
+        'product' => [
+            'driver' => 'local',
+            'root' => public_path('uploads/uploadpic'),
+        ],
 
         'public' => [
             'driver' => 'local',

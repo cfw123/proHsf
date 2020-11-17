@@ -22,4 +22,10 @@ trait Tools {
         $filename = $file->store('', 'course');
         return ['file' => '/uploads/course/' . $filename];
     }
+
+    public function mupfile(Request $request) {
+        $file = $request->file('pic');
+        $filename = $file->store('', 'product');
+        return ['file' => '/uploads/uploadpic/' . $filename];
+    }
 }

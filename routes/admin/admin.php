@@ -25,6 +25,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['che
     // 公用的方法
     // 图片上传
     Route::post('upfile', 'PublicController@upfile')->name('admin.upfile');
+
+
+    Route::post('mupfile', 'PublicController@mupfile')->name('admin.mupfile');
     // 管理员列表管理
     // 列表
     Route::get('user/index', 'UserController@index')->name('admin.user.index');
@@ -67,6 +70,21 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['che
 
     // 课时管理
     Route::resource('lesson','LessonController',['as'=>'admin']);
+
+
+
+
+
+
+    // 案例管理
+    Route::resource('product', 'hsfs\ProductController', ['as' => 'admin']);
+
+
+
+
+
+
+
 });
 //Route::get('/test', function () {
 //    session(['msg' => 'haha']);
