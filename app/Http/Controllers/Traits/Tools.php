@@ -28,4 +28,6 @@ trait Tools {
         $filename = $file->store('', 'product');
         return ['file' => '/uploads/uploadpic/' . $filename];
     }
+
+
 }

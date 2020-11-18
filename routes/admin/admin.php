@@ -28,6 +28,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['che
 
 
     Route::post('mupfile', 'PublicController@mupfile')->name('admin.mupfile');
+
     // 管理员列表管理
     // 列表
     Route::get('user/index', 'UserController@index')->name('admin.user.index');
@@ -78,6 +79,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['che
 
     // 案例管理
     Route::resource('product', 'hsfs\ProductController', ['as' => 'admin']);
+    // 新闻管理
+    Route::resource('new', 'hsfs\NewcontController', ['as' => 'admin']);
 
 
 

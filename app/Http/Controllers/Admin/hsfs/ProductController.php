@@ -6,7 +6,6 @@ use App\Models\hsfs\Procate;
 use App\Models\hsfs\Procont;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
