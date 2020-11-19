@@ -61,9 +61,11 @@ class NewcontController extends Controller
      * @param  \App\Models\hsfs\Newcont  $newcont
      * @return \Illuminate\Http\Response
      */
-    public function edit(Newcont $newcont)
+    public function edit(Request $request,$id)
     {
-        //
+        $data = Newcont::find($id);
+        $cates = Newcate::get();
+        return view('admin.a_new.edit',compact('data','id','cates'));
     }
 
     /**
@@ -73,9 +75,19 @@ class NewcontController extends Controller
      * @param  \App\Models\hsfs\Newcont  $newcont
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Newcont $newcont)
+    public function update(Request $request, $id)
     {
-        //
+
+        $data= $request->except(['_token', 'file','_method']);
+        if ($request->new_pic){
+            $data['new_pic']=$request->new_pic;
+        }else{
+            $data['new_pic'] = Newcont::where('id',$id)->value('new_pic');
+
+        }
+        Newcont::where('id','=',$id)->update($data);
+        return  redirect()->route('admin.new.index')->with('msg', '修改【'.$data['new_name'].'】成功');
+
     }
 
     /**
@@ -86,6 +98,8 @@ class NewcontController extends Controller
      */
     public function destroy(Newcont $newcont)
     {
-        //
+        // 删除
+        $newcont->delete();
+        return ['status' => 0, 'msg' => '删除成功'];
     }
 }

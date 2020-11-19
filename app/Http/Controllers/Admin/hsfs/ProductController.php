@@ -82,7 +82,12 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $data= $request->except(['_token', 'file','_method']);
-        $data['pro_pic']=$request->pro_pic;
+        if ($request->pro_pic){
+            $data['pro_pic']=$request->pro_pic;
+        }else{
+            $data['pro_pic'] = Procont::where('id',$id)->value('pro_pic');
+
+        }
         Procont::where('id','=',$id)->update($data);
        return  redirect()->route('admin.product.index')->with('msg', '修改【'.$data['pro_name'].'】成功');
     }

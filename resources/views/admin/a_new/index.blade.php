@@ -35,7 +35,7 @@
                         <td>{{$item->is_hot}}</td>
                         <td>{{$item->is_recommend}}</td>
                         <td> <img style="width: 90px;height: 90px" src="{{ $item->new_pic }}" style="width: 100px;" id="pic"></td>
-                        <td><a href="{{ route('admin.new.edit',$item) }}" class="btn size-S btn-primary-outline radius">修改</a>
+                        <td><a href="{{ route('admin.new.edit',$item->id) }}" class="btn size-S btn-primary-outline radius">修改</a>
                             <a href="{{ route('admin.new.destroy',$item) }}"  class="btn size-S btn-danger-outline radius delbtn">删除</a></td>
 
                         @empty
