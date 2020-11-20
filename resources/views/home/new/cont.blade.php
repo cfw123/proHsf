@@ -9,8 +9,9 @@
         <span class="hidden-lg hidden-md glyphicon glyphicon-chevron-down"></span>
         </div>
         <div class="navbox">
-            <a href="news.php?type_id=12" class="nav1 overflow tr1 ">行业新闻</a>
-            <a href="news.php?type_id=13" class="nav1 overflow tr1 ">防水知识</a>
+            @foreach($Newcates as $item)
+                <a href="{{ route('home.new.index',$item->id) }}" title="" class="nav1 overflow tr1">{{ $item->cname }}</a>
+            @endforeach
         </div>
         <!--导航大盒子 结束-->
     @endsection

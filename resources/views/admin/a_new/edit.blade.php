@@ -68,7 +68,7 @@
                 <div class="col-sm-10 col-sm-offset-2">
                     <button type="submit" class="btn btn-success radius">
                         <i class="icon-ok"></i>
-                        添加新闻
+                        修改新闻
                     </button>
                 </div>
             </div>

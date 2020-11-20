@@ -20,8 +20,9 @@ Route::group([ 'namespace' => 'Home',], function () {
     Route::get('video', 'IndexController@video')->name('home.video');
 
 
-    Route::resource('new', 'NewController',['as'=>'home']);
-    Route::get('new/{pid?}/{id?}','NewController@cont')->name('home.new.cont')->where(['pid' => '\d+','id' => '\d+']);
+//    Route::resource('new', 'NewController',['as'=>'home']);
+//    Route::get('new/{pid?}/{id?}','NewController@cont')->name('home.new.cont')->where(['pid' => '\d+','id' => '\d+']);
+    Route::get('new/{pid?}/{id?}', 'NewController@index')->name('home.new.index')->where(['pid' => '\d+','id' => '\d+']);
 
 
 

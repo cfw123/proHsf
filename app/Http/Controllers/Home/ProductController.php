@@ -7,15 +7,18 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 class ProductController extends NavController
 {
+
     /**
-     * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * 案例中心   列表 搜素
+     * @param Request $request 搜索关键词  $kw
+     * @param null $pid  案例分类 cid
+     * @param null $id   案例 id
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function index(Request $request,$pid=null,$id=null)
+    public function index(Request $request, $pid=null, $id=null)
     {
         $kw = $request->get('kw');
-//        dd($kw);
 
 
         $pro_list = Procont::when($kw,function(Builder $query) use($kw){
@@ -23,7 +26,6 @@ class ProductController extends NavController
         })->paginate(4);
 
 
-//        $pro_list = Procont::paginate(4);
         if($pid&&$id){
             $pro_cont = Procont::find($id);
             return view('home.product.cont',compact('pro_cont'));

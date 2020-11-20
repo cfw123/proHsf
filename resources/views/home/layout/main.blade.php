@@ -95,8 +95,10 @@
             <li ><a href="{{ route('home.video') }}" class="tr1">客户见证</a></li>
             <li ><a href="{{ route('home.new.index') }}" class="tr1">灵琛动态</a>
                 <ul class="nav-zi">
-                    <li><a href="news.php?type_id=12" title="" class="overflow tr1">行业新闻</a></li>
-                    <li><a href="news.php?type_id=13" title="" class="overflow tr1">防水知识</a></li>
+                    @foreach($Newcates as $item)
+                    <li><a href="{{ route('home.new.index',$item->id) }}" title="" class="overflow tr1">{{ $item->cname }}</a></li>
+                    @endforeach
+                    {{--<li><a href="news.php?type_id=13" title="" class="overflow tr1">防水知识</a></li>--}}
                 </ul>
             </li>
             <li ><a href="{{ route('home.service') }}" class="tr1">服务中心</a>

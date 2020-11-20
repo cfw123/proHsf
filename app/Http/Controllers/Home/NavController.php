@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Models\hsfs\Newcate;
 use App\Models\hsfs\Procate;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,6 +14,7 @@ class NavController extends Controller
     public function __construct()
     {
         $Procates = Procate::all();
-        View::share('Procates', $Procates);// 共享数据
+        $Newcates = Newcate::all();
+        View::share(['Procates'=> $Procates,'Newcates'=>$Newcates]);// 共享数据
     }
 }

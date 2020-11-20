@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Models\hsfs\Newcate;
+use App\Models\hsfs\Newcont;
 use Illuminate\Http\Request;
 
 class NewController extends NavController
@@ -11,86 +13,27 @@ class NewController extends NavController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($pid = null, $id = null)
     {
-        //
-        return  view('home.new.index');
+
+        $new_list = Newcont::orderBy('updated_at', 'DESC')->paginate(4);
+//        dd($new_list);
+        if ($pid && $id) {
+            $new_cont = Newcont::find($id);
+            return view('home.new.cont', compact('new_cont'));
+        }
+
+        if ($pid) {
+
+            $new_list = Newcont::where('cid', $pid)->paginate(2);
+        }
+
+        return view('home.new.index', compact('new_list'));
     }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
-
-
-
-
-
 
 
     // cont 内容
-    public function cont($pid=1,$id=1)
+    public function cont($pid = 1, $id = 1)
     {
         return view('home.new.cont');
     }

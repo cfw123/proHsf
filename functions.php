@@ -1,5 +1,6 @@
 <?php
 
+
 function st($param) {
     return 'http://huisfs.com/' . $param;
 }
