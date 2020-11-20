@@ -1,7 +1,11 @@
 @extends('home.layout.main')
 @section('title', '关于我们')
 @section('content')
+
     @parent
+@section('yd_nav')
+    關於我們<b class="overflow">About Us</b>
+@endsection
     @section('sideContent')
 
 

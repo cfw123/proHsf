@@ -96,7 +96,7 @@
             <li ><a href="{{ route('home.new.index') }}" class="tr1">灵琛动态</a>
                 <ul class="nav-zi">
                     @foreach($Newcates as $item)
-                    <li><a href="{{ route('home.new.index',$item->id) }}" title="" class="overflow tr1">{{ $item->cname }}</a></li>
+                    <li><a href="{{ route('home.new.index',$item->id) }}" title="" class="overflow tr1">{{ $item->new_name }}</a></li>
                     @endforeach
                     {{--<li><a href="news.php?type_id=13" title="" class="overflow tr1">防水知识</a></li>--}}
                 </ul>
@@ -179,7 +179,8 @@
                     <div class="neiye">
                         <!--导航大盒子 开始-->
                         <div class="menu overflow hidden-md hidden-lg">
-                            客户见证<b class="overflow">Video</b>
+                            @yield('yd_nav')
+                            {{--客户见证<b class="overflow">Video</b>--}}
                             <i class="hidden-lg hidden-md"></i>
                             <span class="hidden-lg hidden-md glyphicon glyphicon-chevron-down"></span>
                         </div>
