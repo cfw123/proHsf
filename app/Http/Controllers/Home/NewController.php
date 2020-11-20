@@ -3,9 +3,8 @@
 namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
-class NewController extends Controller
+class NewController extends NavController
 {
     /**
      * Display a listing of the resource.

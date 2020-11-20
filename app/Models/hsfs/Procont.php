@@ -13,6 +13,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\hsfs\Procont newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\hsfs\Procont query()
  * @mixin \Eloquent
+ * @property-read mixed $pro_pic
+ * @method static bool|null forceDelete()
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\hsfs\Procont onlyTrashed()
+ * @method static bool|null restore()
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\hsfs\Procont withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|\App\Models\hsfs\Procont withoutTrashed()
  */
 class Procont extends Base
 {

@@ -85,9 +85,9 @@
             <li ><a href="{{ route('home.about') }}" class="tr1">走进灵琛</a></li>
             <li ><a href="{{ route('home.product.index') }}" class="tr1">服务项目</a>
                 <ul class="nav-zi">
-                    <li><a href="product.php?type_id=59" title="" class="overflow tr1">底楼防潮防霉</a></li>
-                    <li><a href="product.php?type_id=60" title="" class="overflow tr1">地下室防潮防霉</a></li>
-                    <li><a href="product.php?type_id=61" title="" class="overflow tr1">防返潮防霉</a></li>
+                    @foreach($Procates as $item)
+                        <li><a href="{{ route('home.product.cont',[$item->id]) }}"  class="overflow tr1">{{ $item->cname }}</a></li>
+                    @endforeach
                 </ul>
             </li>
             <li ><a href="{{ route('home.video') }}" class="tr1">客户见证</a></li>
@@ -146,9 +146,10 @@
             <div class="left">
                 <div class="link overflow">
                     您是否在找：
-                    <a href="product.php?type_id=59">底楼防潮防霉</a>
-                    <a href="product.php?type_id=60">地下室防潮防霉</a>
-                    <a href="product.php?type_id=61">防返潮防霉</a>
+                    @foreach($Procates as $item)
+                        <a href="{{ route('home.product.cont',[$item->id]) }}" >{{ $item->cname }}</a>
+                    @endforeach
+                    {{--<a href="product.php?type_id=61">防返潮防霉</a>--}}
                 </div>
             </div>
             <div class="right">
@@ -185,9 +186,9 @@
                                 <span class="hidden-lg hidden-md glyphicon glyphicon-chevron-down"></span>
                             </div>
                             <div class="navbox hidden-xs hidden-sm">
-                                <a href="product.php?type_id=59" class="nav1 overflow tr1 ">底楼防潮防霉</a>
-                                <a href="product.php?type_id=60" class="nav1 overflow tr1 ">地下室防潮防霉</a>
-                                <a href="product.php?type_id=61" class="nav1 overflow tr1 ">防返潮防霉</a>
+                                @foreach($Procates as $item)
+                                    <a href="{{ route('home.product.cont',[$item->id]) }}" class="nav1 overflow tr1 ">{{ $item->cname }}</a>
+                                @endforeach
                             </div>
                         @show
                         <!--导航大盒子 结束-->

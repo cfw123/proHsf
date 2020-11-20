@@ -11,8 +11,8 @@
 
             <div class="cont">
                 <div class="product-show">
-                    <div class="t1">底楼防潮防霉</div>
-                    <div class="t3"><img src="/uploads/uploadpic/20200719164608d6k4.jpg" /></div>
+                    <div class="t1">{{ $pro_cont->pro_name }}</div>
+                    <div class="t3"><img src="{{ $pro_cont->pro_pic }}" /></div>
                     <div class="t2">
                     </div>
                 </div>

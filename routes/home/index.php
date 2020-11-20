@@ -11,13 +11,13 @@ Route::group([ 'namespace' => 'Home',], function () {
 
     // 显示首页
     Route::get('', 'IndexController@index')->name('home.index');
-    Route::get('about', 'AboutController@index')->name('home.about');
-    Route::resource('product', 'ProductController',['as'=>'home']);
+    Route::get('about', 'IndexController@about')->name('home.about');
+    Route::get('product', 'ProductController@index')->name('home.product.index');
     Route::get('product/{pid?}/{id?}','ProductController@cont')->name('home.product.cont')->where(['pid' => '\d+','id' => '\d+']);
 
 
 
-    Route::get('video', 'VideoController@index')->name('home.video');
+    Route::get('video', 'IndexController@video')->name('home.video');
 
 
     Route::resource('new', 'NewController',['as'=>'home']);
@@ -25,8 +25,8 @@ Route::group([ 'namespace' => 'Home',], function () {
 
 
 
-    Route::get('service', 'ServiceController@index')->name('home.service');
-    Route::get('contact', 'ContactController@index')->name('home.contact');
+    Route::get('service', 'IndexController@service')->name('home.service');
+    Route::get('contact', 'IndexController@contact')->name('home.contact');
 
 
 
