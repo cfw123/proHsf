@@ -13,6 +13,8 @@
     <link href="{{ asset('home') }}/static/css/tabBar.css" rel="stylesheet">
     <script type="text/javascript" src="{{ asset('home') }}/static/js/jquery.min.js"></script>
     <link href="{{ asset('home') }}/static/css/swiper.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/pagination.css" />
+
     <!--[if lt IE 9]>
     <script src="{{ asset('home') }}/static/js/html5shiv.min.js"></script>
     <script src="{{ asset('home') }}/static/js/respond.min.js"></script>
@@ -86,7 +88,7 @@
             <li ><a href="{{ route('home.product.index') }}" class="tr1">服务项目</a>
                 <ul class="nav-zi">
                     @foreach($Procates as $item)
-                        <li><a href="{{ route('home.product.cont',[$item->id]) }}"  class="overflow tr1">{{ $item->cname }}</a></li>
+                        <li><a href="{{ route('home.product.index',[$item->id]) }}"  class="overflow tr1">{{ $item->cname }}</a></li>
                     @endforeach
                 </ul>
             </li>
@@ -147,14 +149,14 @@
                 <div class="link overflow">
                     您是否在找：
                     @foreach($Procates as $item)
-                        <a href="{{ route('home.product.cont',[$item->id]) }}" >{{ $item->cname }}</a>
+                        <a href="{{ route('home.product.index',[$item->id]) }}" >{{ $item->cname }}</a>
                     @endforeach
                     {{--<a href="product.php?type_id=61">防返潮防霉</a>--}}
                 </div>
             </div>
             <div class="right">
-                <form action="product.php" method="post">
-                    <input type="text" placeholder="请输入关键搜索词" id="keyword" name="keyword">
+                <form action="{{ route('home.product.index') }}" method="get">
+                    <input type="text" placeholder="请输入关键搜索词" id="keyword" value="{{ request()->get('kw','') }}" name="kw">
                     <button type="submit"></button>
                 </form>
             </div>
@@ -187,7 +189,7 @@
                             </div>
                             <div class="navbox hidden-xs hidden-sm">
                                 @foreach($Procates as $item)
-                                    <a href="{{ route('home.product.cont',[$item->id]) }}" class="nav1 overflow tr1 ">{{ $item->cname }}</a>
+                                    <a href="{{ route('home.product.index',[$item->id]) }}" class="nav1 overflow tr1 ">{{ $item->cname }}</a>
                                 @endforeach
                             </div>
                         @show

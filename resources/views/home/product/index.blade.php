@@ -15,7 +15,7 @@
 
                         @forelse($pro_list as $item)
                             <div class="col-md-4 col-sm-4 col-xs-6">
-                                <a href="{{ route('home.product.cont',[$item->cid,$item->id]) }}" class="imgbox tr1">
+                                <a href="{{ route('home.product.index',[$item->cid,$item->id]) }}" class="imgbox tr1">
                                     <div class="tu">
                                         <div class="img tr1 item23" data-original="{{ $item->pro_pic }}" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                                             <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
@@ -152,7 +152,9 @@
                         {{--</div>--}}
                     </div>
                     <div style=" float:left;margin:auto;width:100%;height:40px;text-align:center;line-height:40px;font-size:14px; ">
-                        当前第1页&nbsp;&nbsp;<a href='?page=1'>上一页</a>&nbsp;&nbsp;<a href='?page=2''>下一页</a>&nbsp;&nbsp;一共22条							</div>
+                        {{ $pro_list->appends(request()->except(['page']))->links() }}
+                    </div>
+                        {{--当前第1页&nbsp;&nbsp;<a href='?page=1'>上一页</a>&nbsp;&nbsp;<a href='?page=2''>下一页</a>&nbsp;&nbsp;一共22条							</div>--}}
                 </div>
             </div>
         </div>

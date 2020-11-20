@@ -12,8 +12,8 @@ Route::group([ 'namespace' => 'Home',], function () {
     // 显示首页
     Route::get('', 'IndexController@index')->name('home.index');
     Route::get('about', 'IndexController@about')->name('home.about');
-    Route::get('product', 'ProductController@index')->name('home.product.index');
-    Route::get('product/{pid?}/{id?}','ProductController@cont')->name('home.product.cont')->where(['pid' => '\d+','id' => '\d+']);
+    Route::get('product/{pid?}/{id?}', 'ProductController@index')->name('home.product.index')->where(['pid' => '\d+','id' => '\d+']);
+//    Route::get('product','ProductController@cont')->name('home.product.cont')->where(['pid' => '\d+','id' => '\d+']);
 
 
 
