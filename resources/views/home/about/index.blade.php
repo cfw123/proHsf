@@ -3,9 +3,19 @@
 @section('content')
 
     @parent
-@section('yd_nav')
-    關於我們<b class="overflow">About Us</b>
-@endsection
+
+    @section('sidebar')
+        <!--导航大盒子 开始-->
+        <div  class="menu overflow">
+            关于我们<b class="overflow">About Us</b>
+            <i class="hidden-lg hidden-md"></i>
+            <span class="hidden-lg hidden-md  iconfont icon-jiantouarrow483"></span>
+        </div>
+
+        <!--导航大盒子 结束-->
+    @endsection
+
+
     @section('sideContent')
 
 

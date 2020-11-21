@@ -2,12 +2,13 @@
 @section('title', '我们的服务')
 @section('content')
     @parent
+
     @section('sidebar')
         <!--导航大盒子 开始-->
         <div  class="menu overflow">
-            服务中心<b class="overflow">Product list</b>
+            服务中心<b class="overflow">Service Center</b>
             <i class="hidden-lg hidden-md"></i>
-            <span class="hidden-lg hidden-md glyphicon glyphicon-chevron-down"></span>
+            <span class="hidden-lg hidden-md  iconfont icon-jiantouarrow483"></span>
         </div>
         <div class="navbox">
             <a href="service.php?id=23" class="nav1 overflow tr1 ">服务流程</a>

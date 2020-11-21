@@ -2,6 +2,20 @@
     @section('title', '客户见证')
 @section('content')
     @parent
+
+
+    @section('sidebar')
+        <!--导航大盒子 开始-->
+        <div  class="menu overflow">
+            客户见证<b class="overflow">Video</b>
+            <i class="hidden-lg hidden-md"></i>
+            <span class="hidden-lg hidden-md  iconfont icon-jiantouarrow483"></span>
+        </div>
+
+        <!--导航大盒子 结束-->
+    @endsection
+
+
     @section('sideContent')
         <div class="col-md-9">
             <div class="right">

@@ -13,7 +13,12 @@
     <link href="{{ asset('home') }}/static/css/tabBar.css" rel="stylesheet">
     <script type="text/javascript" src="{{ asset('home') }}/static/js/jquery.min.js"></script>
     <link href="{{ asset('home') }}/static/css/swiper.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/pagination.css" />
+    {{--<link rel="stylesheet" type="text/css" href="/css/pagination.css" />--}}
+
+
+    <link href="{{ asset('home') }}/static/font-awesome/m_css/iconfont.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_2218995_q7esz8ja6rl.css">
+
 
     <!--[if lt IE 9]>
     <script src="{{ asset('home') }}/static/js/html5shiv.min.js"></script>
@@ -177,13 +182,13 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="neiye">
-                        <!--导航大盒子 开始-->
-                        <div class="menu overflow hidden-md hidden-lg">
-                            @yield('yd_nav')
+                        {{--<!--导航大盒子 开始-->--}}
+                        {{--<div class="menu overflow hidden-md hidden-lg">--}}
+                            {{--@yield('yd_nav')--}}
                             {{--客户见证<b class="overflow">Video</b>--}}
-                            <i class="hidden-lg hidden-md"></i>
-                            <span class="hidden-lg hidden-md glyphicon glyphicon-chevron-down"></span>
-                        </div>
+
+                            {{--<i class="icon-jiantouarrow483"></i>--}}
+                        {{--</div>--}}
                         @section('sidebar')
                             <div class="menu overflow hidden-xs hidden-sm">
                                 服务项目<b class="overflow">Service item</b>
@@ -195,7 +200,7 @@
                                     <a href="{{ route('home.product.index',[$item->id]) }}" class="nav1 overflow tr1 ">{{ $item->cname }}</a>
                                 @endforeach
                             </div>
-                        @show
+                         @show
                         <!--导航大盒子 结束-->
                         <div class="lian hidden-sm hidden-xs">
                             <div  class="menu">联系方式Contact us</div>
@@ -327,6 +332,6 @@
 <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.3.0.js"></script>
 <script src="{{ asset('home') }}/static/js/tabbar.js" type="text/javascript" charset="utf-8"></script>
 <script id="qijuacscript" type="text/javascript" src="https://ac.qijucn.com/qijuacc.js" data="sn5f1160146a071b685c"></script>
-
+@yield('m_js')
 </body>
 </html>

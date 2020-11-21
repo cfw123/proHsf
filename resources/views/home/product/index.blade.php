@@ -2,6 +2,20 @@
 @section('title', '工程案例')
 @section('content')
     @parent
+    @section('sidebar')
+
+        <!--导航大盒子 开始-->
+        <div  class="menu overflow">
+            服务项目<b class="overflow">Product Item</b>
+            <i class="hidden-lg hidden-md"></i>
+            <span class="hidden-lg hidden-md  iconfont icon-jiantouarrow483"></span>
+        </div>
+        <div class="navbox">
+            @foreach($Procates as $item)
+                <a href="{{ route('home.product.index',[$item->id]) }}" class="nav1 overflow tr1 ">{{ $item->cname }}</a>
+            @endforeach
+        </div>
+    @endsection
 @section('sideContent')
     <div class="col-md-9">
         <div class="right">
@@ -162,5 +176,16 @@
 
 @endsection
 
+
+@endsection
+
+@section('m_js')
+    <script>
+        console.log(1)
+        $("#m_nav").click(function(){
+        console.log(1)
+            $("#m_nav a").toggle();
+        });
+    </script>
 
 @endsection

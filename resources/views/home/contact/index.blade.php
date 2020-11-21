@@ -2,6 +2,19 @@
 @section('title', '联系我们')
 @section('content')
     @parent
+
+    @section('sidebar')
+        <!--导航大盒子 开始-->
+        <div  class="menu overflow">
+            联系我们<b class="overflow">Contact Us</b>
+            <i class="hidden-lg hidden-md"></i>
+            <span class="hidden-lg hidden-md  iconfont icon-jiantouarrow483"></span>
+        </div>
+
+        <!--导航大盒子 结束-->
+    @endsection
+
+
     @section('sideContent')
 
 

@@ -7,7 +7,7 @@
     <div  class="menu overflow">
     灵琛动态<b class="overflow">News list</b>
     <i class="hidden-lg hidden-md"></i>
-    <span class="hidden-lg hidden-md glyphicon glyphicon-chevron-down"></span>
+    <span class="hidden-lg hidden-md iconfont icon-jiantouarrow483"></span>
     </div>
     <div class="navbox">
         @foreach($Newcates as $item)
