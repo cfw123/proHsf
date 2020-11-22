@@ -28,7 +28,7 @@
     <!--低版本浏览器自动跳转升级浏览器-->
     <title>@yield('title','上海防水-地下室防潮-防湿处理-防湿防潮公司-上海灵琛装饰工程')  上海防水-地下室防潮-防湿处理-防湿防潮公司-上海灵琛装饰工程</title>
     <meta name="keywords" content="地下室防潮,防湿处理,地下室防湿,上海防水,防潮处理,上海防潮公司,上海防湿公司,防水公司,防湿防潮处理,防湿防潮公司,防水处理,防水防潮"/>
-    <meta name="description" content="上海灵琛装饰工程有限公司作为一家上海防水公司,主要从事下雨天，梅雨季节地下室地面出汗，反水等现象进行防潮,防湿处理的业务。结合多年的实际经验。"/>
+    <meta name="description" content="大荔秦荔豫防水有限公司作为一家上海防水公司,主要从事下雨天，梅雨季节地下室地面出汗，反水等现象进行防潮,防湿处理的业务。结合多年的实际经验。"/>
 
         @yield('my_css')
 
@@ -38,7 +38,7 @@
 <div class="topbox hidden-sm hidden-xs">
     <div class="container-fluid">
         <div class="clearfix">
-            <div class="left pull-left">欢迎来到上海灵琛装饰工程有限公司官方网站~</div>
+            <div class="left pull-left">欢迎来到大荔秦荔豫防水有限公司官方网站~</div>
             <div class="right pull-right">
                 <a href="./">网站首页</a>  |  <a href="contat.php">联系我们</a>
             </div>
@@ -59,7 +59,7 @@
             </div>
             <div class="right pull-right hidden-sm hidden-xs">
                 <div class="phone">
-                    <img src="{{ asset('home') }}/static/images/phone.png">15821696629
+                    <img src="{{ asset('home') }}/static/images/phone.png">13992308054
                 </div>
             </div>
         </div>
@@ -103,15 +103,15 @@
             <li ><a href="{{ route('home.new.index') }}" class="tr1">灵琛动态</a>
                 <ul class="nav-zi">
                     @foreach($Newcates as $item)
-                    <li><a href="{{ route('home.new.index',$item->id) }}" title="" class="overflow tr1">{{ $item->new_name }}</a></li>
+                    <li><a href="{{ route('home.new.index',[$item->id]) }}" title="" class="overflow tr1">{{ $item->cname }}</a></li>
                     @endforeach
                     {{--<li><a href="news.php?type_id=13" title="" class="overflow tr1">防水知识</a></li>--}}
                 </ul>
             </li>
             <li ><a href="{{ route('home.service') }}" class="tr1">服务中心</a>
-                <ul class="nav-zi">
-                    <li><a href="service.php?id=23" title="" class="overflow tr1">服务流程</a></li>
-                </ul>
+                {{--<ul class="nav-zi">--}}
+                    {{--<li><a href="service.php?id=23" title="" class="overflow tr1">服务流程</a></li>--}}
+                {{--</ul>--}}
             </li>
             <li ><a href="{{ route('home.contact') }}" class="tr1">联系方式</a></li>
         </ul>
@@ -201,7 +201,7 @@
                             <div  class="menu">联系方式Contact us</div>
                             <div class="hezi">
                                 <div class="text">
-                                    <p><strong>胖大叔</strong></p><p>联系人：施经理</p><p>手机号：15821696629</p><p>地址：上海市闵行区莘建路90弄一号401</p>                                </div>
+                                    <p><strong>胖大叔</strong></p><p>联系人：王经理</p><p>手机号：13992308054</p><p>地址：上海市闵行区莘建路90弄一号401</p>                                </div>
                             </div>
                         </div>
                     </div>
@@ -228,7 +228,7 @@
             <a href="{{ route('home.contact') }}">联系方式</a>
         </div>
         <div class="text">
-            版权所有 @ 上海灵琛装饰工程有限公司　<a href="http://www.beian.miit.gov.cn" target="_blank" style="color:#FFFFFF">沪ICP备20020896号-1</a>
+            版权所有 @ 大荔秦荔豫防水有限公司　<a href="http://www.beian.miit.gov.cn" target="_blank" style="color:#FFFFFF">沪ICP备20020896号-1</a>
         </div>
     </div>
 </footer>
@@ -238,14 +238,14 @@
 <div class="hot w100 hidden-lg hidden-md clearfix">
     <div class="row">
         <div class="col-xs-3 text-center no-padding">
-            {{--<a href="tel:15821696629" class="no-decoration">--}}
+            {{--<a href="tel:13992308054" class="no-decoration">--}}
             <a href="tel:13992308054" class="no-decoration">
                 <span class="fa fa-phone"></span>
                 <h6 class="no-margin">电话</h6>
             </a>
         </div>
         <div class="col-xs-3 text-center no-padding">
-            <a href="sms:15821696629" class="no-decoration">
+            <a href="sms:13992308054" class="no-decoration">
                 <span class="fa fa-mobile"></span>
                 <h6 class="no-margin">消息</h6>
             </a>

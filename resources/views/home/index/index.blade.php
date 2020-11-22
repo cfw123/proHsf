@@ -65,8 +65,8 @@
 
                 </div>
             </div>
-            <div class="swiper-button-prev swiper-button tr2"> </div>
-            <div class="swiper-button-next swiper-button tr2"> </div>
+            {{--<div class="swiper-button-prev swiper-button tr2"> </div>--}}
+            {{--<div class="swiper-button-next swiper-button tr2"> </div>--}}
         </div>
         <a href="{{ route('home.product.index') }}" class="more01 tr1">查看更多</a>
     </div>
@@ -306,7 +306,7 @@
                         <div class="biaoti hidden-sm hidden-xs">联系我们</div>
                         <div class="wenzi">
                             <div class="text">
-                                <p><b>胖大叔</b></p><p>联系人：施经理</p><p>手机号：15821696629</p><p><img src="{{ asset('home') }}/static/images/wxCode.png" title="1595495874419129.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
+                                <p><b>胖大叔</b></p><p>联系人：王经理</p><p>手机号：13992308054</p><p><img src="{{ asset('home') }}/static/images/wxCode.png" title="1595495874419129.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
 
                         </div>
                     </div>

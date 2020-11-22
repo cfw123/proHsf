@@ -25,7 +25,7 @@ class ProductController extends NavController
 
         $pro_list = Procont::when($kw,function(Builder $query) use($kw){
             $query->orderBy('updated_at', 'DESC')->orderBy('created_at','desc')->where('pro_name','like',"%{$kw}%");
-        })->paginate(4);
+        })->paginate(6);
 
 
         if($pid&&$id){
