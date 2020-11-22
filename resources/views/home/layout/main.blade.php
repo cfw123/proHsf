@@ -182,13 +182,6 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="neiye">
-                        {{--<!--导航大盒子 开始-->--}}
-                        {{--<div class="menu overflow hidden-md hidden-lg">--}}
-                            {{--@yield('yd_nav')--}}
-                            {{--客户见证<b class="overflow">Video</b>--}}
-
-                            {{--<i class="icon-jiantouarrow483"></i>--}}
-                        {{--</div>--}}
                         @section('sidebar')
                             <div class="menu overflow hidden-xs hidden-sm">
                                 服务项目<b class="overflow">Service item</b>

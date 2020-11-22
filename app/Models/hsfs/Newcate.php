@@ -15,4 +15,9 @@ use Illuminate\Database\Eloquent\Model;
 class Newcate extends Model
 {
     protected $guarded=[];
+
+    public function news()
+    {
+       return  $this->hasMany(Newcont::class,'cid');
+    }
 }

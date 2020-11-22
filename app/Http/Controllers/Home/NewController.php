@@ -16,16 +16,17 @@ class NewController extends NavController
     public function index($pid = null, $id = null)
     {
 
-        $new_list = Newcont::orderBy('updated_at', 'DESC')->paginate(4);
+        $new_list = Newcont::orderBy('updated_at', 'DESC')->paginate(3);
 //        dd($new_list);
         if ($pid && $id) {
             $new_cont = Newcont::find($id);
+//            dd($new_cont);
             return view('home.new.cont', compact('new_cont'));
         }
 
         if ($pid) {
 
-            $new_list = Newcont::where('cid', $pid)->paginate(2);
+            $new_list = Newcont::where('cid', $pid)->paginate(3);
         }
 
         return view('home.new.index', compact('new_list'));

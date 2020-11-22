@@ -14,42 +14,21 @@
         <div class="swiper1">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
+                    @foreach($product_list as $item)
                     <div class="swiper-slide">
-                        <a href="product.php?type_id=59" class="imgbox tr1">
+                        <a href="{{ route('home.product.index',[$item->cid,$item->id]) }}" class="imgbox tr1">
                             <div class="tu tr1">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200721191311r9uh.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
+                                <div class="img tr1 item23" data-original="{{ $item->pro_pic }}" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                                     <img src="{{ asset('home') }}/static/images/fuwu.png" style="max-width:100%">
                                 </div>
                             </div>
-                            <div class="tou overflow tr1" title="">底楼防潮防霉</div>
+                            <div class="tou overflow tr1" title="">{{ $item->pro_name }}</div>
                             <div class="text">
-                                底楼防潮防霉                            </div>
+                                {{ $item->cate->cname }}                           </div>
                         </a>
                     </div>
-                    <div class="swiper-slide">
-                        <a href="product.php?type_id=60" class="imgbox tr1">
-                            <div class="tu tr1">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/2020072119132082ah.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/fuwu.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">地下室防潮防霉</div>
-                            <div class="text">
-                                地下室防潮防霉                            </div>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="product.php?type_id=61" class="imgbox tr1">
-                            <div class="tu tr1">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/202007211913299rj1.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/fuwu.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">防返潮防霉</div>
-                            <div class="text">
-                                防返潮防霉                            </div>
-                        </a>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
             <!-- <div class="swiper-button-prev swiper-button tr2"> </div>
@@ -69,144 +48,27 @@
         </div>
         <div class="swiper2">
             <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="product-show.php?id=56&type_id=59" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164608d6k4.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
+                <div class="swiper-wrapper" id="m_proList">
+
+                    @foreach($pro_list as $pro)
+                        {{--<div class="swiper-slide">--}}
+                            <a href="{{ route('home.product.index',[$pro->cid,$pro->id]) }}" class="my_a imgbox tr1">
+                                <div class="tu">
+                                    <div class="img tr1 item23" data-original="{{ $pro->pro_pic }}" style=" background:url(images/zhan.jpg) no-repeat center/cover">
+                                        <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">底楼防潮防霉</div>
-                        </a>
-                        <a href="product-show.php?id=57&type_id=59" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164614pfbp.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">底楼防潮防霉</div>
-                        </a>
-                    </div><div class='swiper-slide'>                         <a href="product-show.php?id=58&type_id=59" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164620d63h.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">底楼防潮防霉</div>
-                        </a>
-                        <a href="product-show.php?id=59&type_id=59" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164626h4af.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">底楼防潮防霉</div>
-                        </a>
-                    </div><div class='swiper-slide'>                         <a href="product-show.php?id=60&type_id=59" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164632u6uc.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">底楼防潮防霉</div>
-                        </a>
-                        <a href="product-show.php?id=63&type_id=59" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164800x3mw.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">底楼防潮防霉</div>
-                        </a>
-                    </div><div class='swiper-slide'>                         <a href="product-show.php?id=64&type_id=60" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164814c3qd.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">地下室防潮防霉</div>
-                        </a>
-                        <a href="product-show.php?id=65&type_id=60" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164820wxbj.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">地下室防潮防霉</div>
-                        </a>
-                    </div><div class='swiper-slide'>                         <a href="product-show.php?id=66&type_id=60" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164826qna4.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">地下室防潮防霉</div>
-                        </a>
-                        <a href="product-show.php?id=67&type_id=60" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164832fxca.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">地下室防潮防霉</div>
-                        </a>
-                    </div><div class='swiper-slide'>                         <a href="product-show.php?id=68&type_id=60" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/202007191648382kfa.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">地下室防潮防霉</div>
-                        </a>
-                        <a href="product-show.php?id=69&type_id=60" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719164844p5fg.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">地下室防潮防霉</div>
-                        </a>
-                    </div><div class='swiper-slide'>                         <a href="product-show.php?id=72&type_id=61" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719165309av35.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">防返潮防霉</div>
-                        </a>
-                        <a href="product-show.php?id=73&type_id=61" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719165315dstn.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">防返潮防霉</div>
-                        </a>
-                    </div><div class='swiper-slide'>                         <a href="product-show.php?id=76&type_id=61" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719165332563n.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">防返潮防霉</div>
-                        </a>
-                        <a href="product-show.php?id=77&type_id=61" class="imgbox tr1">
-                            <div class="tu">
-                                <div class="img tr1 item23" data-original="uploads/uploadpic/20200719165337mkgj.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
-                                    <img src="{{ asset('home') }}/static/images/zhe.png" style="max-width:100%">
-                                </div>
-                            </div>
-                            <div class="tou overflow tr1" title="">防返潮防霉</div>
-                        </a>
-                    </div>
+                                <div class="tou overflow tr1" title="">{{ $pro->pro_name }}</div>
+                            </a>
+                        {{--</div>--}}
+                    @endforeach
 
                 </div>
             </div>
-            <!-- <div class="swiper-button-prev swiper-button tr2"> </div>
-            <div class="swiper-button-next swiper-button tr2"> </div> -->
+            <div class="swiper-button-prev swiper-button tr2"> </div>
+            <div class="swiper-button-next swiper-button tr2"> </div>
         </div>
-        <a href="product.php" class="more01 tr1">查看更多</a>
+        <a href="{{ route('home.product.index') }}" class="more01 tr1">查看更多</a>
     </div>
 </div>
 
@@ -308,6 +170,7 @@
             </div>
         </div>
         <div class="row">
+
             <div class="col-md-4 col-sm-4 col-xs-6 ">
                 <div class="imgbox tr1">
                     <video width="100%" height="100%" controls="controls" poster="uploads/uploadpic/20200721172949wpkk.jpg">
@@ -345,7 +208,7 @@
                 </div>
             </div>
         </div>
-        <a href="video.php" class="more01 tr1">查看更多</a>
+        <a href="{{ route('home.video') }}" class="more01 tr1">查看更多</a>
     </div>
 </div>
 
@@ -372,73 +235,57 @@
             <div class="col-md-6">
                 <div class="left">
                     <a href="news.php?type_id=12" class="imgbox tr1 clearfix">
-                        <div class="img tr1 item23" data-original="uploads/uploadpic/2020072209060528de.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
+                        <div class="img tr1 item23" data-original="{{  $new_list['right'][0]['news'][0]['new_pic'] }}" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                             <img src="{{ asset('home') }}/static/images/news.png" style="max-width: 100%">
                         </div>
-                        <div class="tou overflow" title="">公司新闻</div>
+                        <div class="tou overflow" title="">{{ $new_list['left']['0']['cname']}}</div>
                     </a>
-                    <div class="box">
-                        <div class="wenzi tr active">
+                    <div class="box my_new_nav">
+                        @foreach($new_list['left'][0]['news'] as $new_item)
+                         <div class="wenzi tr">
                             <div class="clearfix">
-                                <div class="time"><b>19</b> 2020-07</div>
+{{--                                <div class="time"><b>{{ $new_item['view_count'] }}</b> {{ date_format($new_item['created_at'],'Y-m-d') }}</div>--}}
+                                <div class="time"><b>{{ $new_item['view_count'] }}</b> {{ subStr_date($new_item['created_at']) }}</div>
                                 <div class="you">
-                                    <div class="zi overflow" title="">没有专业的技术指导和施工队伍，你怎么把地下室防水防潮做好？</div>
+                                    <div class="zi overflow" title="">{{ $new_item['new_name'] }}</div>
                                 </div>
                             </div>
                             <div class="text">
-                                　　进行地下室防水防潮施工的之前，应提前准备相应的地下室防水防潮材料。要保证这些防水防潮主材料的含量、强度、柔性以及不透水性等符合施工要求。..
+                                <a href="{{ url('/new/'. $new_item['cid'].'/'.$new_item['id']) }}" >{!!   str_limit($new_item['new_cont'], $limit = 280, $end = '...') !!}</a>
                             </div>
                         </div>
-                        <div class="wenzi tr ">
-                            <div class="clearfix">
-                                <div class="time"><b>19</b> 2020-07</div>
-                                <div class="you">
-                                    <div class="zi overflow" title="">别墅地下室空间防水防潮的重点与解决方案</div>
-                                </div>
-                            </div>
-                            <div class="text">
-                                相关问题，一直是防水行业的技术难点，因地下空间结构复杂、旧防水材料生产所执行的规范较早，结合我公司30多年的防水施工经验，针对不同客户的不同..
-                            </div>
-                        </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="right">
                     <a href="news.php?type_id=13" class="imgbox tr1 clearfix">
-                        <div class="img tr1 item23" data-original="uploads/uploadpic/20200722090615nktg.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
+                        <div class="img tr1 item23" data-original="{{ $new_list['right']['0']['news'][0]['new_pic']}}" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                             <img src="{{ asset('home') }}/static/images/news.png" style="max-width: 100%">
                         </div>
-                        <div class="tou overflow" title="">公司新闻</div>
+                        <div class="tou overflow" title="">{{ $new_list['right']['0']['cname']}}</div>
                     </a>
-                    <div class="box">
-                        <div class="wenzi tr active">
-                            <div class="clearfix">
-                                <div class="time"><b>21</b> 2020-07</div>
-                                <div class="you">
-                                    <div class="zi overflow" title="">没有专业的技术指导和施工队伍，你怎么把地下室防水防潮做好？</div>
+                    <div class="box my_new_nav">
+                        @foreach($new_list['right'][0]['news'] as $new_item)
+                            <div class="wenzi tr">
+                                <div class="clearfix">
+                                    <div class="time"><b>{{ $new_item['view_count'] }}</b> {{ subStr_date($new_item['created_at']) }}</div>
+                                    <div class="you">
+                                        <div class="zi overflow" title="">{{ $new_item['new_name'] }}</div>
+                                    </div>
+                                </div>
+                                <div class="text">
+                                   <a href="{{ url('/new/'. $new_item['cid'].'/'.$new_item['id']) }}" > {!!   str_limit($new_item['new_cont'], $limit = 240, $end = '...') !!}</a>
                                 </div>
                             </div>
-                            <div class="text">
-                                &nbsp; 进行地下室防水防潮施工的之前，应提前准备相应的地下室防水防潮材料。要保证这些防水防潮主材料的含量、强度、柔性以及不透水性等符合..
-                            </div>
-                        </div>
-                        <div class="wenzi tr ">
-                            <div class="clearfix">
-                                <div class="time"><b>21</b> 2020-07</div>
-                                <div class="you">
-                                    <div class="zi overflow" title="">别墅地下室空间防水防潮的重点与解决方案</div>
-                                </div>
-                            </div>
-                            <div class="text">
-                                &nbsp;相关问题，一直是防水行业的技术难点，因地下空间结构复杂、旧防水材料生产所执行的规范较早，结合我公司30多年的防水施工经验，针对不..
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
-        <a href="news.php" class="more01 tr1">查看更多</a>
+        <a href="{{ route('home.new.index') }}" class="more01 tr1">查看更多</a>
     </div>
 </div>
 
@@ -487,6 +334,22 @@
                             </div>
                         </form>
                         <script>
+
+                            $(document).ready(function(){
+                                // 新闻列表
+                                $('.my_new_nav').eq(0).find('.tr').eq(0).addClass('active');
+                                $('.my_new_nav').eq(1).find('.tr').eq(1).addClass('active');
+
+
+
+                                // 案例列表
+                                var lis2n = $("#m_proList").find(".my_a:nth-child(2n)").each(function(i){
+                                    // (i);
+                                    $('.my_a').slice(i*2,i*2+2).wrapAll("<div class='swiper-slide'></div>");
+                                });
+                            });
+
+
                             $('#button1').on('click', function(){
                                 $formdata = $('#myForm').serialize();
                                 $.ajax({

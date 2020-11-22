@@ -26,7 +26,7 @@ class Newcont extends Base
     protected $dates   = ['deleted_at'];
     // 分类  属于
     public function cate() {
-        return $this->belongsTo(Procate::class,'cid');
+        return $this->belongsTo(Newcate::class,'cid');
     }
 
     public function getList() {

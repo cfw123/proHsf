@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<h1>test</h1>
+<ul>
+  <li class="m_li"></li>
+  <li class="m_li"></li>
+  <li class="m_li"></li>
+  <li class="m_li"></li>
+  <li class="m_li"></li>
+  <li class="m_li"></li>
+  <li class="m_li"></li>
+  <li class="m_li"></li>
+</ul>
+<body>
+<script src="./lib/jquery/1.9.1/jquery.js"></script>
+<script>
+
+    $(document).ready(function(){
+        var lis2n = $("ul").find(".m_li:nth-child(2n)").each(function(i){
+            $('.m_li').slice(i*2,i*2+2).wrapAll("<div></div>");
+        });
+    });
+
+    // $("ul").click(function(){
+    //     var lis2n = $("ul").find("li:nth-child(2n)").each(function(i){
+    //       $('li').slice(i*2,i*2+2).wrapAll("<div></div>");
+    //     });
+    // });
+
+
+    // // 每两个为一组包裹起来
+    // var slides2n = $("#frame").find(".phone-screen:nth-child(2n)").each(function(i){
+    //     slides.slice(i*2,i*2+2).wrapAll("<div class='ipad-screen swiper-slide clearfix'></div>");
+    // });
+    // //剩下的再用div包起来
+    // slides.slice(slides2n.length * 2).wrapAll("<div class='ipad-screen swiper-slide clearfix'></div>");
+</script>
+</body>
+</html>

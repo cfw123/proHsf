@@ -10,9 +10,10 @@
             <i class="hidden-lg hidden-md"></i>
             <span class="hidden-lg hidden-md  iconfont icon-jiantouarrow483"></span>
         </div>
+{{--        <h1>{{ Route::crruentRouteName() }}</h1>--}}
         <div class="navbox">
             @foreach($Procates as $item)
-                <a href="{{ route('home.product.index',[$item->id]) }}" class="nav1 overflow tr1 ">{{ $item->cname }}</a>
+                <a href="{{ route('home.product.index',[$item->id]) }}" @if(1) class="nav1 overflow tr1 active"   @endif class="nav1 overflow tr1 ">{{ $item->cname }}</a>
             @endforeach
         </div>
     @endsection

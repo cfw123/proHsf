@@ -17,4 +17,9 @@ class Procate extends Model
     //
 
     protected $guarded=[];
+
+    public function conts()
+    {
+       return $this->hasMany(Procont::class,'cid');
+    }
 }

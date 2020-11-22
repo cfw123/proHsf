@@ -1,6 +1,22 @@
 <?php
 
 
+/**
+ *  "2020-11-18 21:30:09"  ==>  2020-11;
+ * @param $str
+ * @return string
+ */
+function subStr_date($str){
+    if($str){
+        $patterns = '/(\d+)-(\d+)-.*?/';
+        $date = preg_match_all($patterns, $str , $matches);
+        return $matches[1][0].'-'.$matches[2][0];
+    }
+
+    return "2020-11";
+}
+
+//var_dump(test($str));
 function st($param) {
     return 'http://huisfs.com/' . $param;
 }
