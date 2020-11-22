@@ -11,7 +11,7 @@
         </div>
         <div class="navbox">
             @foreach($Procates as $item)
-                <a href="{{ route('home.product.index',[$item->id]) }}" class="nav1 overflow tr1 ">{{ $item->cname }}</a>
+                <a href="{{ route('home.product.index',[$item->id]) }}" @if($item->id == $pid) class="nav1 overflow tr1 active"   @endif class="nav1 overflow tr1 ">{{ $item->cname }}</a>
             @endforeach
         </div>
     @endsection

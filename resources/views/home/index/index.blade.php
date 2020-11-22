@@ -143,7 +143,7 @@
         </div>
         <div class="hezi clearfix">
             <div class="left">
-                <a href="about.php" class="imgbox tr1">
+                <a href="{{ route('home.about') }}" class="imgbox tr1">
                     <div class="img tr2 item23" data-original="images/about.jpg" style=" background:url(images/zhan.jpg) no-repeat center/contain">
                         <img src="{{ asset('home') }}/static/images/about.png" style="max-width:100%">
                     </div>
@@ -154,7 +154,7 @@
                     <p>　　胖大叔品牌隶属于上海灵琛装饰工程有限公司，我们主要从事地下室防潮、防霉、防水等施工，服务对象包括工业园区、化工企业、厂房、物业小区等系统办公、生产类建筑和生活居住类建筑以及桥梁地铁隧道等建筑。<br style="box-sizing: border-box; margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: 微软雅黑; white-space: normal; background-color: rgb(255, 255, 255);"/>　　地下室一直以来潮湿发霉是所有业主的老大难，或者是发愁问题，每当下雨天或者梅雨季节的时候所有客户的地下室或者底楼房间的地面墙面都会出现薄薄的一层水珠，或者像出汗一样的潮气，人呆在里面感觉特别潮湿难受，放在里面的东西都会发霉受潮烂掉十分让人无可奈何。现在我们团队经过不断的学习摸索经验完全解决了这个老大难问题，施工以后达到明显效果，可以达到二楼以上房屋的干糙程度，在不破坏施工面的情况下，可以保证长期干燥，如果达不到这个效果公司全额退款不收取任何费用并承诺长期保修。</p><p>　　本着立足上海、服务上海的企业精神，将确保对上海的建筑防水工程领域做出更大的贡献，以更加精湛的技术，更好的服务，为上海的建设做出更大的努力。</p>                </div>
             </div>
         </div>
-        <a href="about.php" class="more01 tr1">查看更多</a>
+        <a href="{{ route('home.about') }}" class="more01 tr1">查看更多</a>
     </div>
 </div>
 
@@ -306,7 +306,7 @@
                         <div class="biaoti hidden-sm hidden-xs">联系我们</div>
                         <div class="wenzi">
                             <div class="text">
-                                <p><b>胖大叔</b></p><p>联系人：施经理</p><p>手机号：15821696629</p><p><img src="{{ asset('home') }}/static//uploads/uploadpic/1595495874419129.png" title="1595495874419129.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
+                                <p><b>胖大叔</b></p><p>联系人：施经理</p><p>手机号：15821696629</p><p><img src="{{ asset('home') }}/static/images/wxCode.png" title="1595495874419129.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
 
                         </div>
                     </div>
@@ -338,7 +338,7 @@
                             $(document).ready(function(){
                                 // 新闻列表
                                 $('.my_new_nav').eq(0).find('.tr').eq(0).addClass('active');
-                                $('.my_new_nav').eq(1).find('.tr').eq(1).addClass('active');
+                                $('.my_new_nav').eq(1).find('.tr').eq(0).addClass('active');
 
 
 

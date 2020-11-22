@@ -11,7 +11,7 @@
     </div>
     <div class="navbox">
         @foreach($Newcates as $item)
-            <a href="{{ route('home.new.index',$item->id) }}" title="" class="nav1 overflow tr1">{{ $item->cname }}</a>
+            <a href="{{ route('home.new.index',$item->id) }}" title="" @if($item->id == $pid) class="nav1 overflow tr1 active"   @endif class="nav1 overflow tr1">{{ $item->cname }}</a>
         @endforeach
     </div>
     <!--导航大盒子 结束-->

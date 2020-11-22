@@ -30,6 +30,8 @@
     <meta name="keywords" content="地下室防潮,防湿处理,地下室防湿,上海防水,防潮处理,上海防潮公司,上海防湿公司,防水公司,防湿防潮处理,防湿防潮公司,防水处理,防水防潮"/>
     <meta name="description" content="上海灵琛装饰工程有限公司作为一家上海防水公司,主要从事下雨天，梅雨季节地下室地面出汗，反水等现象进行防潮,防湿处理的业务。结合多年的实际经验。"/>
 
+        @yield('my_css')
+
 </head>
 
 <body>
@@ -236,7 +238,8 @@
 <div class="hot w100 hidden-lg hidden-md clearfix">
     <div class="row">
         <div class="col-xs-3 text-center no-padding">
-            <a href="tel:15821696629" class="no-decoration">
+            {{--<a href="tel:15821696629" class="no-decoration">--}}
+            <a href="tel:13992308054" class="no-decoration">
                 <span class="fa fa-phone"></span>
                 <h6 class="no-margin">电话</h6>
             </a>
@@ -261,10 +264,12 @@
         </div>
     </div>
 </div>
+
+// 底部弹微信二维码
 <div class="dbbox hidden-md hidden-lg">
     <div class="dbs ewm-box">
         <div class="neirong">
-            <img src="{{ asset('home') }}/static/images/weixin.jpg" alt="">
+            <img src="{{ asset('home') }}/static/images/wxCode.png" alt="">
         </div>
     </div>
 </div>

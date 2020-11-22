@@ -19,24 +19,27 @@ class ProductController extends NavController
     public function index(Request $request, $pid=null, $id=null)
     {
         $kw = $request->get('kw');
-
+       if(!$pid) {
+           $pid='';
+       }
 
         $pro_list = Procont::when($kw,function(Builder $query) use($kw){
-            $query->where('pro_name','like',"%{$kw}%");
+            $query->orderBy('updated_at', 'DESC')->orderBy('created_at','desc')->where('pro_name','like',"%{$kw}%");
         })->paginate(4);
 
 
         if($pid&&$id){
             $pro_cont = Procont::find($id);
-            return view('home.product.cont',compact('pro_cont'));
+            return view('home.product.cont',compact('pid','pro_cont'));
         }
 
         if($pid){
 
-            $pro_list = Procont::where('cid',$pid)->paginate(2);
+            $pro_list = Procont::orderBy('updated_at', 'DESC')->orderBy('created_at','desc')->where('cid',$pid)->paginate(6);
         }
+        return view('home.product.index',compact('pid','pro_list'));
 
-        return view('home.product.index',compact('pro_list'));
+
     }
 
 

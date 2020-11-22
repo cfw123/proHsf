@@ -16,26 +16,30 @@ class NewController extends NavController
     public function index($pid = null, $id = null)
     {
 
-        $new_list = Newcont::orderBy('updated_at', 'DESC')->paginate(3);
+        if(!$pid)
+        {
+            $pid='';
+        }
+        $new_list = Newcont::orderBy('updated_at', 'DESC')->orderBy('created_at','desc')->paginate(3);
 //        dd($new_list);
         if ($pid && $id) {
             $new_cont = Newcont::find($id);
-//            dd($new_cont);
-            return view('home.new.cont', compact('new_cont'));
+          $next_article =  Newcont::where('id','>',$id)->orderBy('id','asc')->first();
+          $prev_article =  Newcont::where('id','<',$id)->orderBy('id','desc')->first();
+//          dd($prev_article);
+//          if($prev_article==''){
+//              return 'no news';
+//          }
+            return view('home.new.cont', compact('next_article','prev_article','pid','new_cont'));
         }
 
         if ($pid) {
 
-            $new_list = Newcont::where('cid', $pid)->paginate(3);
+            $new_list = Newcont::orderBy('updated_at', 'DESC')->orderBy('created_at','desc')->where('cid', $pid)->paginate(3);
         }
 
-        return view('home.new.index', compact('new_list'));
+        return view('home.new.index', compact('pid','new_list'));
     }
 
 
-    // cont 内容
-    public function cont($pid = 1, $id = 1)
-    {
-        return view('home.new.cont');
-    }
 }

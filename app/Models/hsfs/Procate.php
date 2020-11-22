@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\hsfs\Procate newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\hsfs\Procate query()
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\hsfs\Procont[] $conts
  */
 class Procate extends Model
 {

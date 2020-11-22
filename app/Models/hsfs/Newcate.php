@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\hsfs\Newcate newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\hsfs\Newcate query()
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\hsfs\Newcont[] $news
  */
 class Newcate extends Model
 {

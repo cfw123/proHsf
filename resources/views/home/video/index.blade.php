@@ -42,7 +42,7 @@
          </div>
     </div>-->
                             <div class="col-md-4 col-sm-4 col-xs-6" style="margin-bottom:15px;">
-                                <a href="video-show.php?id=39" class="imgbox tr1 item23" data-original="/uploads/uploadpic/20200721172949wpkk.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
+                                <a href="#" class="imgbox tr1 item23" data-original="/uploads/uploadpic/20200721172949wpkk.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                                 </a>
                                 <div class="tou overflow tr1" title="">客户见证</div>
                             </div>
@@ -60,7 +60,7 @@
                      </div>
                 </div>-->
                             <div class="col-md-4 col-sm-4 col-xs-6" style="margin-bottom:15px;">
-                                <a href="video-show.php?id=40" class="imgbox tr1 item23" data-original="/uploads/uploadpic/20200721173000m6ky.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
+                                <a href="#" class="imgbox tr1 item23" data-original="/uploads/uploadpic/20200721173000m6ky.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                                 </a>
                                 <div class="tou overflow tr1" title="">客户见证</div>
                             </div>
@@ -78,7 +78,7 @@
                      </div>
                 </div>-->
                             <div class="col-md-4 col-sm-4 col-xs-6" style="margin-bottom:15px;">
-                                <a href="video-show.php?id=41" class="imgbox tr1 item23" data-original="/uploads/uploadpic/20200721173012vstj.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
+                                <a href="#" class="imgbox tr1 item23" data-original="/uploads/uploadpic/20200721173012vstj.jpg" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                                 </a>
                                 <div class="tou overflow tr1" title="">客户见证</div>
                             </div>
