@@ -26,10 +26,10 @@
     <script>window.location.href='update/';</script>
     <![endif]-->
     <!--低版本浏览器自动跳转升级浏览器-->
-    <title>@yield('title','上海防水-地下室防潮-防湿处理-防湿防潮公司-上海灵琛装饰工程')  上海防水-地下室防潮-防湿处理-防湿防潮公司-上海灵琛装饰工程</title>
-    <meta name="keywords" content="地下室防潮,防湿处理,地下室防湿,上海防水,防潮处理,上海防潮公司,上海防湿公司,防水公司,防湿防潮处理,防湿防潮公司,防水处理,防水防潮"/>
-    <meta name="description" content="大荔秦荔豫防水有限公司作为一家上海防水公司,主要从事下雨天，梅雨季节地下室地面出汗，反水等现象进行防潮,防湿处理的业务。结合多年的实际经验。"/>
-
+    <title>@yield('title','大荔防水-地下室防潮-防湿处理-房顶漏雨维修-大荔防水工程服务')  大荔防水-地下室防潮-防湿处理-房顶漏雨维修-大荔防水工程服务</title>
+    <meta name="keywords" content="室内外防水、房顶漏雨维修、隔热保温、外墙防水、水暖安装维修钢结构防水、防腐等，承揽各种防水、防腐工程， 专业承接各类新旧建筑防水堵漏工程。"/>
+    <meta name="description" content="渭南地区专业防水 室内外防水、房顶漏雨维修、隔热保温、外墙防水。咨询热线1392308054。大荔秦荔豫防水有限公司作为一家大荔防水公司,主要从事下雨天，梅雨季节地下室地面出汗，反水等现象进行防潮,防湿处理的业务。结合多年的实际经验。"/>
+    <META NAME="Author" CONTENT="350668878@qq.com">
         @yield('my_css')
 
 </head>
@@ -40,7 +40,7 @@
         <div class="clearfix">
             <div class="left pull-left">欢迎来到大荔秦荔豫防水有限公司官方网站~</div>
             <div class="right pull-right">
-                <a href="./">网站首页</a>  |  <a href="contat.php">联系我们</a>
+                <a href="./">网站首页</a>  |  <a href="{{ route('home.contact') }}">联系我们</a>
             </div>
         </div>
     </div>
@@ -73,10 +73,10 @@
         <div class="sjdnav hidden-md hidden-lg">
             <ul class="list-unstyled no-margin">
                 <li><a href="./" class="tr1">网站首页</a></li>
-                <li><a href="{{ route('home.about') }}" class="tr1">走进灵琛</a></li>
+                <li><a href="{{ route('home.about') }}" class="tr1">走进秦荔豫</a></li>
                 <li><a href="{{ route('home.product.index') }}" class="tr1">服务项目</a></li>
                 <li><a href="{{ route('home.video') }}" class="tr1">客户见证</a></li>
-                <li><a href="{{ route('home.new.index') }}" class="tr1">灵琛动态</a></li>
+                <li><a href="{{ route('home.new.index') }}" class="tr1">秦荔豫动态</a></li>
                 <li><a href="{{ route('home.service') }}" class="tr1">服务中心</a></li>
                 <li><a href="{{ route('home.contact') }}" class="tr1">联系方式</a></li>
             </ul>
@@ -89,18 +89,19 @@
 <!--2、PC导航-->
 <div class="nav hidden-sm hidden-xs">
     <div class="container-fluid">
+        {{--<h1>{{ Request::url() }}----{{ route('home.about') }}</h1>--}}
         <ul class="clearfix">
-            <li class='on'><a href="./" class="tr1">首页</a></li>
-            <li ><a href="{{ route('home.about') }}" class="tr1">走进灵琛</a></li>
-            <li ><a href="{{ route('home.product.index') }}" class="tr1">服务项目</a>
+            <li @if (Request::url()==route('home.index')) class='on' @endif><a href="{{ route('home.index') }}" class="tr1">首页</a></li>
+            <li @if (Request::url()==route('home.about')) class='on' @endif ><a href="{{ route('home.about') }}" class="tr1">走进秦荔豫</a></li>
+            <li @if (Request::url()==route('home.product.index')) class='on' @endif ><a href="{{ route('home.product.index') }}" class="tr1">服务项目</a>
                 <ul class="nav-zi">
                     @foreach($Procates as $item)
                         <li><a href="{{ route('home.product.index',[$item->id]) }}"  class="overflow tr1">{{ $item->cname }}</a></li>
                     @endforeach
                 </ul>
             </li>
-            <li ><a href="{{ route('home.video') }}" class="tr1">客户见证</a></li>
-            <li ><a href="{{ route('home.new.index') }}" class="tr1">灵琛动态</a>
+            <li @if (Request::url()==route('home.video')) class='on' @endif ><a href="{{ route('home.video') }}" class="tr1">客户见证</a></li>
+            <li @if (Request::url()==route('home.new.index')) class='on' @endif ><a href="{{ route('home.new.index') }}" class="tr1">秦荔豫动态</a>
                 <ul class="nav-zi">
                     @foreach($Newcates as $item)
                     <li><a href="{{ route('home.new.index',[$item->id]) }}" title="" class="overflow tr1">{{ $item->cname }}</a></li>
@@ -108,12 +109,12 @@
                     {{--<li><a href="news.php?type_id=13" title="" class="overflow tr1">防水知识</a></li>--}}
                 </ul>
             </li>
-            <li ><a href="{{ route('home.service') }}" class="tr1">服务中心</a>
+            <li @if (Request::url()==route('home.service')) class='on' @endif ><a href="{{ route('home.service') }}" class="tr1">服务中心</a>
                 {{--<ul class="nav-zi">--}}
                     {{--<li><a href="service.php?id=23" title="" class="overflow tr1">服务流程</a></li>--}}
                 {{--</ul>--}}
             </li>
-            <li ><a href="{{ route('home.contact') }}" class="tr1">联系方式</a></li>
+            <li @if (Request::url()==route('home.contact')) class='on' @endif ><a href="{{ route('home.contact') }}" class="tr1">联系方式</a></li>
         </ul>
     </div>
 </div>
@@ -201,7 +202,7 @@
                             <div  class="menu">联系方式Contact us</div>
                             <div class="hezi">
                                 <div class="text">
-                                    <p><strong>胖大叔</strong></p><p>联系人：王经理</p><p>手机号：13992308054</p><p>地址：上海市闵行区莘建路90弄一号401</p>                                </div>
+                                    <p>联系人：王经理</p><p>手机号：13992308054</p><p>地址：大荔县西城街道办屈家巷</p>                                </div>
                             </div>
                         </div>
                     </div>
@@ -220,15 +221,15 @@
     <div class="container-fluid">
         <div class="link hidden-sm hidden-xs">
             <a href="./">首页</a> |
-            <a href="{{ route('home.about') }}">走进灵琛</a> |
+            <a href="{{ route('home.about') }}">走进秦荔豫</a> |
             <a href="{{ route('home.product.index') }}">服务项目</a> |
             <a href="{{ route('home.video') }}">客户见证</a> |
-            <a href="{{ route('home.new.index') }}">灵琛动态</a> |
+            <a href="{{ route('home.new.index') }}">秦荔豫动态</a> |
             <a href="{{ route('home.service') }}">服务中心</a> |
             <a href="{{ route('home.contact') }}">联系方式</a>
         </div>
         <div class="text">
-            版权所有 @ 大荔秦荔豫防水有限公司　<a href="http://www.beian.miit.gov.cn" target="_blank" style="color:#FFFFFF">沪ICP备20020896号-1</a>
+            版权所有 @ 大荔秦荔豫防水有限公司　<a href="https://beian.miit.gov.cn/" target="_blank" style="color:#FFFFFF">陕ICP备2020017274号</a>
         </div>
     </div>
 </footer>
@@ -265,7 +266,7 @@
     </div>
 </div>
 
-// 底部弹微信二维码
+{{--// 底部弹微信二维码--}}
 <div class="dbbox hidden-md hidden-lg">
     <div class="dbs ewm-box">
         <div class="neirong">

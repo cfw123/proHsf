@@ -11,7 +11,7 @@
             <span class="hidden-lg hidden-md  iconfont icon-jiantouarrow483"></span>
         </div>
         <div class="navbox">
-            <a href="service.php?id=23" class="nav1 overflow tr1 ">服务流程</a>
+            <a href="#" class="nav1 overflow tr1 ">服务流程</a>
         </div>
         <!--导航大盒子 结束-->
     @endsection

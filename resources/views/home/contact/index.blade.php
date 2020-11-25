@@ -29,7 +29,7 @@
                 <div class="cont">
                     <div class="call-us">
                         <div class="text">
-                            <p><strong>胖大叔</strong></p><p>联系人：施经理</p><p>手机号：15821696629</p><p>地址：上海市闵行区莘建路90弄一号401</p><p><img src="/uploadpic/ueditor/image/20200723/1595495855160637.png" title="1595495855160637.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
+                            <p>联系人：王经理</p><p>手机号：13892594420</p><p>地址：大荔县西城街道办屈家巷七巷</p><p><img src="{{ asset('home') }}/static/images/wxCode.png" title="1595495855160637.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
                     </div>
                 </div>
                 <div>
@@ -55,7 +55,8 @@
                         //创建地图函数：
                         function createMap(){
                             var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
-                            var point = new BMap.Point(121.384327,31.112426);//定义一个中心点坐标
+                            // var point = new BMap.Point(121.384327,31.112426);//定义一个中心点坐标
+                            var point = new BMap.Point(109.944087,34.79168);//定义一个中心点坐标
                             map.centerAndZoom(point,16);//设定地图的中心点和坐标并将地图显示在地图容器中
                             window.map = map;//将map变量存储在全局
                         }
@@ -82,7 +83,7 @@
                         }
 
                         //标注点数组
-                        var markerArr = [{title:"上海灵琛装饰工程有限公司",content:"地址：上海市闵行区莘建路90弄一号401",point:"121.384884|31.112426",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+                        var markerArr = [{title:"大荔秦荔豫防水有限公司",content:"地址：大荔县西城街道办屈家巷七巷",point:"109.944087|34.79168",isOpen:1,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
                         ];
                         //创建marker
                         function addMarker(){

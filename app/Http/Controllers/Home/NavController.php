@@ -15,6 +15,7 @@ class NavController extends Controller
     {
         $Procates = Procate::all();
         $Newcates = Newcate::all();
+
 //        dd($Newcates);
         View::share(['Procates'=> $Procates,'Newcates'=>$Newcates]);// 共享数据
     }
