@@ -234,7 +234,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="left">
-                    <a href="news.php?type_id=12" class="imgbox tr1 clearfix">
+                    <a href="{{ url('/new/'. $new_list['left']['0']['id']) }}" class="imgbox tr1 clearfix">
                         <div class="img tr1 item23" data-original="{{  $new_list['right'][0]['news'][0]['new_pic'] }}" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                             <img src="{{ asset('home') }}/static/images/news.png" style="max-width: 100%">
                         </div>
@@ -261,7 +261,7 @@
             </div>
             <div class="col-md-6">
                 <div class="right">
-                    <a href="news.php?type_id=13" class="imgbox tr1 clearfix">
+                    <a href="{{ url('/new/'. $new_list['right']['0']['id']) }}" class="imgbox tr1 clearfix">
                         <div class="img tr1 item23" data-original="{{ $new_list['right']['0']['news'][0]['new_pic']}}" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                             <img src="{{ asset('home') }}/static/images/news.png" style="max-width: 100%">
                         </div>
@@ -306,7 +306,7 @@
                         <div class="biaoti hidden-sm hidden-xs">联系我们</div>
                         <div class="wenzi">
                             <div class="text">
-                                <p><b>胖大叔</b></p><p>联系人：王经理</p><p>手机号：13992308054</p><p><img src="{{ asset('home') }}/static/images/wxCode.png" title="1595495874419129.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
+                                <p>联系人：王经理</p><p>手机号：13992308054</p><p><img src="{{ asset('home') }}/static/images/wxCode.png" title="1595495874419129.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
 
                         </div>
                     </div>

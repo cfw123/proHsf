@@ -31,7 +31,7 @@ class IndexController extends NavController
             if($item->id  ==1){
 
                 $new_list['left'] = Newcate::with(['news' => function ($q) {
-                    $q->orderby('created_at', 'desc')->orderby('updated_at', 'desc')->take(2);
+                    $q->orderby('updated_at', 'desc')->orderby('created_at', 'desc')->take(2);
                 }])->where('id',$item->id)->get()->toArray();
 
 
@@ -39,7 +39,7 @@ class IndexController extends NavController
             if($item->id  ==2){
 
                 $new_list['right'] = Newcate::with(['news' => function ($q) {
-                    $q->orderby('created_at', 'desc')->orderby('updated_at', 'desc')->take(2);
+                    $q->orderby('updated_at', 'desc')->orderby('created_at', 'desc')->take(2);
                 }])->where('id',$item->id)->get()->toArray();
 
 

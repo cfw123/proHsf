@@ -33,7 +33,7 @@
 @section('sidebar')
     <!--导航大盒子 开始-->
     <div class="menu overflow">
-        灵琛动态<b class="overflow">News list</b>
+        秦荔豫动态<b class="overflow">News list</b>
         <i class="hidden-lg hidden-md"></i>
         <span class="hidden-lg hidden-md iconfont icon-jiantouarrow483"></span>
     </div>
