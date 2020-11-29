@@ -10,12 +10,15 @@
 |
 */
 //
-Route::get('/', function () {
-    return 111;
-});
+use Illuminate\Support\Facades\Hash;
 
-Route::get('test', 'TestController@index');
-Route::get('test1', 'TestController@show');
+//Route::get('/test', function () {
+//    return Hash::make('cfw123');
+////    return decrypt('$2y$10$cNTqhHOD.c42wOTbLuPszuiOGGuMp4n8W2BB.hEKhra7xajEKngjm');
+//});
+
+//Route::get('test', 'TestController@index');
+//Route::get('test1', 'TestController@show');
 
 
 include base_path('routes/admin/admin.php');

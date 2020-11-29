@@ -7,7 +7,7 @@
  */
 
 // 后台管理
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['checklogin:admin.login']], function () {
+Route::group(['prefix' => 'cfw/814/admin', 'namespace' => 'Admin', 'middleware' => ['checklogin:admin.login']], function () {
 
     // 登录显示admin/login
     Route::get('login', 'LoginController@index')->name('admin.login');

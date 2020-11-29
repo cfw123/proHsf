@@ -78,7 +78,8 @@ class NewcontController extends Controller
     public function update(Request $request, $id)
     {
 
-        $data= $request->except(['_token', 'file','_method']);
+        $data= $request->except(['_token','file','_method']);
+
         if ($request->new_pic){
             $data['new_pic']=$request->new_pic;
         }else{

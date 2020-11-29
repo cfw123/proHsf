@@ -6,6 +6,7 @@ use App\Models\hsfs\Procate;
 use App\Models\hsfs\Procont;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -42,6 +43,9 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
+        if (!$request->new_pic){
+            return redirect()->route('admin.product.index')->with('msg', '请添加图片');
+        }
         Procont::create($request->except(['_token', 'file']));
         return redirect()->route('admin.product.index')->with('msg', '添加成功');
     }
@@ -81,11 +85,12 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data= $request->except(['_token', 'file','_method']);
+        $data= $request->except(['_token','file','_method']);
+//
         if ($request->pro_pic){
             $data['pro_pic']=$request->pro_pic;
         }else{
-            $data['pro_pic'] = Procont::where('id',$id)->value('pro_pic');
+            $data['pro_pic'] = DB::table('proconts')->where('id',$id)->value('pro_pic');
 
         }
         Procont::where('id','=',$id)->update($data);

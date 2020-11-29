@@ -11,6 +11,7 @@
             <span class="hidden-lg hidden-md  iconfont icon-jiantouarrow483"></span>
         </div>
 
+
         <!--导航大盒子 结束-->
     @endsection
 
@@ -29,7 +30,7 @@
                 <div class="cont">
                     <div class="call-us">
                         <div class="text">
-                            <p>联系人：王经理</p><p>手机号：13892594420</p><p>地址：大荔县西城街道办屈家巷七巷</p><p><img src="{{ asset('home') }}/static/images/wxCode.png" title="1595495855160637.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
+                            <p>联系人：王经理</p><p>手机号：13992308054</p><p>地址：大荔县西城街道办屈家巷七巷</p><p><img src="{{ asset('home') }}/static/images/wxCode.png" title="1595495855160637.png" alt="1.png"/></p><p>&nbsp; 扫一扫二维码，加我微信</p>                            </div>
                     </div>
                 </div>
                 <div>

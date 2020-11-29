@@ -32,10 +32,11 @@
                                     <div class="img tr1 item22" data-original="{{ $item->new_pic }}"
                                          style="background-position:center; background-size:cover;"></div>
                                 </div>
-                                <div class="text clearfix">
+                                <div class="text clearfix" style="float:left">
                                     <div class="tou overflow tr1" title="">{{ $item->new_name }}</div>
-                                    <div class="zi">
+                                    <div class="zi" >
                                         {!!   str_limit($item->new_cont, $limit = 280, $end = '...') !!}
+{{--                                       {{  str_limit($item->new_cont, $limit = 280, $end = '...') }}--}}
                                     </div>
                                     <div class="xia clearfix">
                                         {{--                                        <div class="time pull-left">{{ date_format($item->created_at),'Y-m-d' }}</div>--}}

@@ -18,7 +18,7 @@ function subStr_date($str){
 
 //var_dump(test($str));
 function st($param) {
-    return 'http://huisfs.com/' . $param;
+    return 'http://www.qinlyfs.dev/' . $param;
 }
 
 function treeLevel(array $data, string $html = '---', int $pid = 0, int $level = 0) {

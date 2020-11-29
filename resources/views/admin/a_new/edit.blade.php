@@ -12,7 +12,8 @@
                     <span class="select-box">
                     <select name="cid" class="select">
                         @foreach($cates as $item)
-                            <option value="{{ $item->id }}">{{ $item->cname }}</option>
+                            <option value="{{ $item->id }}"  @if( $data['cid']==$item['id'] ) selected="selected" @endif>{{ $item->cname }}</option>
+
                         @endforeach
                     </select>
                     </span>

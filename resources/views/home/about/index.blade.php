@@ -6,14 +6,18 @@
 
     @section('sidebar')
         <!--导航大盒子 开始-->
-        <div  class="menu overflow">
-            关于我们<b class="overflow">About Us</b>
+        <div class="menu overflow">
+            服务项目<b class="overflow">Product Item</b>
             <i class="hidden-lg hidden-md"></i>
             <span class="hidden-lg hidden-md  iconfont icon-jiantouarrow483"></span>
         </div>
-
-        <!--导航大盒子 结束-->
+        <div class="navbox">
+            @foreach($Procates as $item)
+                <a href="{{ route('home.product.index',[$item->id]) }}" class="nav1 overflow tr1 ">{{ $item->cname }}</a>
+            @endforeach
+        </div>
     @endsection
+        <!--导航大盒子 结束-->
 
 
     @section('sideContent')

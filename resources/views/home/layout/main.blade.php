@@ -26,12 +26,20 @@
     <script>window.location.href='update/';</script>
     <![endif]-->
     <!--低版本浏览器自动跳转升级浏览器-->
-    <title>@yield('title','大荔防水-地下室防潮-防湿处理-房顶漏雨维修-大荔防水工程服务')  大荔防水-地下室防潮-防湿处理-房顶漏雨维修-大荔防水工程服务</title>
-    <meta name="keywords" content="室内外防水、房顶漏雨维修、隔热保温、外墙防水、水暖安装维修钢结构防水、防腐等，承揽各种防水、防腐工程， 专业承接各类新旧建筑防水堵漏工程。"/>
-    <meta name="description" content="渭南地区专业防水 室内外防水、房顶漏雨维修、隔热保温、外墙防水。咨询热线1392308054。大荔秦荔豫防水有限公司作为一家大荔防水公司,主要从事下雨天，梅雨季节地下室地面出汗，反水等现象进行防潮,防湿处理的业务。结合多年的实际经验。"/>
+    <title>@yield('title','秦荔豫防水-渭南地区专业防水-大荔防水-卫生间防潮-地下室防潮-防湿处理-房顶漏雨维修-大荔防水工程服务')  渭南地区专业防水-大荔防水-卫生间防潮-地下室防潮-防湿处理-房顶漏雨维修-大荔防水工程服务</title>
+    <meta name="keywords" content="室内外防水、卫生间防潮、房顶漏雨维修、隔热保温、外墙防水、水暖安装维修钢结构防水、防腐等，承揽各种防水、防腐工程， 专业承接各类新旧建筑防水堵漏工程。"/>
+    <meta name="description" content="秦荔豫防水、渭南地区专业防水、大荔防水、室内外防水、卫生间防潮、房顶漏雨维修、隔热保温、外墙防水。咨询热线1392308054。大荔秦荔豫防水有限公司作为一家大荔防水公司,主要从事下雨天，梅雨季节地下室地面出汗，反水等现象进行防潮,防湿处理的业务。结合多年的实际经验。"/>
     <META NAME="Author" CONTENT="350668878@qq.com">
         @yield('my_css')
-
+    {{--<script>--}}
+        {{--var _hmt = _hmt || [];--}}
+        {{--(function() {--}}
+            {{--var hm = document.createElement("script");--}}
+            {{--hm.src = "https://hm.baidu.com/hm.js?41bb60ff77d3bed96ed8a98ab4bf979d";--}}
+            {{--var s = document.getElementsByTagName("script")[0];--}}
+            {{--s.parentNode.insertBefore(hm, s);--}}
+        {{--})();--}}
+    {{--</script>--}}
 </head>
 
 <body>
@@ -229,7 +237,7 @@
             <a href="{{ route('home.contact') }}">联系方式</a>
         </div>
         <div class="text">
-            版权所有 @ 大荔秦荔豫防水有限公司　<a href="https://beian.miit.gov.cn/" target="_blank" style="color:#FFFFFF">陕ICP备2020017274号</a>
+            版权所有 @ 大荔秦荔豫防水有限公司　<a href="https://beian.miit.gov.cn/" target="_blank" style="color:#FFFFFF">陕ICP备2020017274号-1</a>
         </div>
     </div>
 </footer>

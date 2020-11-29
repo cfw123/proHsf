@@ -163,13 +163,13 @@ return [
         App\Providers\RouteServiceProvider::class,
 
 		# IDE
-		Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+//		Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
         # 验证码
-        Mews\Captcha\CaptchaServiceProvider::class,
+//        Mews\Captcha\CaptchaServiceProvider::class,
 
         # debugbar
-        Barryvdh\Debugbar\ServiceProvider::class,
+//        Barryvdh\Debugbar\ServiceProvider::class,
 
     ],
 

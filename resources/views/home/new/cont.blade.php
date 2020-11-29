@@ -52,7 +52,7 @@
     <div class="col-md-9">
         <div class="right">
             <div class="title-zi hidden-sm hidden-xs">
-                <div class="zuo">灵琛动态</div>
+                <div class="zuo">秦荔豫动态</div>
             </div>
 
             <div class="cont">

@@ -9,7 +9,7 @@
                 <div class="ying">service</div>
                 <div class="zhong">服务项目<span>覆盖各大行业</span></div>
             </div>
-            <div class="text2">胖大叔主要从事地下室防潮、防霉等施工</div>
+            <div class="text2">秦荔豫主要从事地下室防潮、防霉等施工</div>
         </div>
         <div class="swiper1">
             <div class="swiper-container">
@@ -117,8 +117,8 @@
                             </div>
                             <ul>
                                 <li>长久保持干爽， </li>
-                                <li>地下室返潮发霉的克星，</li>
-                                <li>胖大叔是您的不二之选。</li>
+                                <li>新型材料，补漏专用配方，</li>
+                                <li>秦荔豫是您的不二之选。</li>
                             </ul>
                         </div>
                     </div>
@@ -235,7 +235,7 @@
             <div class="col-md-6">
                 <div class="left">
                     <a href="{{ url('/new/'. $new_list['left']['0']['id']) }}" class="imgbox tr1 clearfix">
-                        <div class="img tr1 item23" data-original="{{  $new_list['right'][0]['news'][0]['new_pic'] }}" style=" background:url(images/zhan.jpg) no-repeat center/cover">
+                        <div class="img tr1 item23" data-original="{{  $new_list['left'][0]['news'][0]['new_pic'] }}" style=" background:url(images/zhan.jpg) no-repeat center/cover">
                             <img src="{{ asset('home') }}/static/images/news.png" style="max-width: 100%">
                         </div>
                         <div class="tou overflow" title="">{{ $new_list['left']['0']['cname']}}</div>
@@ -277,7 +277,7 @@
                                     </div>
                                 </div>
                                 <div class="text">
-                                   <a href="{{ url('/new/'. $new_item['cid'].'/'.$new_item['id']) }}" > {!!   str_limit($new_item['new_cont'], $limit = 240, $end = '...') !!}</a>
+                                   <a href="{{ url('/new/'. $new_item['cid'].'/'.$new_item['id']) }}" > {!!   str_limit($new_item['new_cont'], $limit = 280, $end = '...') !!}</a>
                                 </div>
                             </div>
                         @endforeach
@@ -288,7 +288,6 @@
         <a href="{{ route('home.new.index') }}" class="more01 tr1">查看更多</a>
     </div>
 </div>
-
 
 
 <div class="lianxi main1">
@@ -353,7 +352,7 @@
                             $('#button1').on('click', function(){
                                 $formdata = $('#myForm').serialize();
                                 $.ajax({
-                                    url:'https://ly.qijucn.com/v1/message/web',
+                                    url:'https://qinlyfs.com/v1/message/web',
                                     type:'get',
                                     data:$formdata,
                                     dataType:'jsonp',
